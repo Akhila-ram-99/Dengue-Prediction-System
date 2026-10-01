@@ -93,9 +93,12 @@ def predict():
         fever_days = float(data.get("FeverDays", 0))
 
         features = [[
-            fever, headache, joint_pain, vomiting, rash,
-            eye_pain, fatigue, muscle_pain, nausea,0
-        ]]
+    fever,
+    headache,
+    joint_pain,
+    vomiting,
+    rash
+]]
 
         result = model.predict(features)[0]
         result_text = str(result).strip().lower()
